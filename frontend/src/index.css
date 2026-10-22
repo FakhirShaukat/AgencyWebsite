@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  font-family:
+    "Poppins", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #064e3b;
+  color: #fff;
+}
+
+.hero-glow::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 78% 15%, rgb(16 185 129 / 9%), transparent 34%),
+    radial-gradient(ellipse at 15% 65%, rgb(217 119 6 / 6%), transparent 32%);
+  content: "";
+  pointer-events: none;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
